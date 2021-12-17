@@ -5,13 +5,16 @@ void main() {
     MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.indigo,
-        appBar: AppBar(title: const Text('My First App'), centerTitle: true),
+        appBar: AppBar(
+          title: const Text('My First App'),
+          centerTitle: true,
+        ),
         body: const Center(
           child: Text(
             'This is My Homepage',
             style: TextStyle(
-                fontSize: 30,
                 fontWeight: FontWeight.bold,
+                fontSize: 30,
                 color: Colors.white),
           ),
         ),
