@@ -7,13 +7,11 @@ void main() {
 class MyFirstApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Text(
-            'Welcome to TestFlight',
-            style: TextStyle(fontSize: 27, fontWeight: FontWeight.w800),
-        ),
-      ),
+    return Container(
+      color: Colors.white,
+child: Column(
+  text
+),
     );
   }
 }
