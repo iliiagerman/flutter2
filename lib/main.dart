@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -9,11 +10,9 @@ class MyFirstApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      color: Colors.white,
       home: Scaffold(
         body: SafeArea(
           child: Container(
-            color: Colors.white,
             child: Column(
               children: <Widget>[
                 SizedBox(
@@ -177,7 +176,9 @@ class MyFirstApp extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           fontSize: 11,
                         ),
-                      )
+                      ),
+                      SizedBox(height: 20,),
+                      CupertinoButton.filled(child: Text('Continue'), onPressed: (){}),
                     ],
                   ),
                 ),
