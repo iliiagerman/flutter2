@@ -7,11 +7,31 @@ void main() {
 class MyFirstApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return MaterialApp(
       color: Colors.white,
-child: Column(
-  text
-),
+      home: SafeArea(
+        child: Container(
+          color: Colors.white,
+          child: Column(
+            children:  <Widget>[
+              Text(
+                'Welcome to TestFlifht',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w800,
+                    fontSize: 27,decoration: TextDecoration.none
+                ),
+              ),
+          //     Row(
+          //       children: [
+          //         Text('Accept ...'),
+          //         Text('Accept ...'),
+          //       ],
+          //     ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
