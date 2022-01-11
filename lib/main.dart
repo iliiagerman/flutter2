@@ -16,26 +16,32 @@ class MyFirstApp extends StatelessWidget {
             color: Colors.white,
             child: Column(
               children: <Widget>[
-                SizedBox(height: 70,),
+                SizedBox(
+                  height: 70,
+                ),
                 Text(
                   'Welcome to TestFlifht',
                   style: TextStyle(
                       color: Colors.black,
-                      fontWeight: FontWeight.w700,
+                      fontWeight: FontWeight.w800,
                       fontSize: 27,
                       decoration: TextDecoration.none),
                 ),
                 Row(
                   children: [
                     SizedBox(
-                      width: 50,
+                      width: 30,
                     ),
                     SizedBox(
                       height: 100,
                     ),
                     SvgPicture.asset(
-                        'lib/assets/images/anchor.svg',
-                      color: Colors.blue,
+                      'lib/assets/images/anchor.svg',
+                      color: Colors.blueAccent,
+                      width: 40,
+                    ),
+                    SizedBox(
+                      width: 10,
                     ),
                     Expanded(
                       child: Column(
@@ -43,7 +49,7 @@ class MyFirstApp extends StatelessWidget {
                         children: [
                           Text('Accept Invitations',
                               style: TextStyle(
-                                fontSize: 13,
+                                fontSize: 14,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black,
                               )),
@@ -53,14 +59,127 @@ class MyFirstApp extends StatelessWidget {
                               maxLines: 3,
                               // softWrap: false,
                               style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.normal,
+                                fontSize: 13,
+                                fontWeight: FontWeight.w200,
                                 color: Colors.black,
                               )),
                         ],
                       ),
                     )
                   ],
+                ),
+                Row(
+                  children: [
+                    SizedBox(
+                      width: 30,
+                    ),
+                    SizedBox(
+                      height: 100,
+                    ),
+                    SvgPicture.asset(
+                      'lib/assets/images/cpu.svg',
+                      color: Colors.blueAccent,
+                      width: 40,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Test Beta Apps',
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              )),
+                          Text(
+                              'Test out the new functionality before it s released in the App Store',
+                              // overflow: TextOverflow.fade,
+                              maxLines: 3,
+                              // softWrap: false,
+                              style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w200,
+                                color: Colors.black,
+                              )),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+                Row(
+                  children: [
+                    SizedBox(
+                      width: 30,
+                    ),
+                    SizedBox(
+                      height: 100,
+                    ),
+                    SvgPicture.asset(
+                      'lib/assets/images/star.svg',
+                      color: Colors.blueAccent,
+                      width: 40,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Provide Feedback',
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              )),
+                          Text(
+                              'Help developers build better apps by providing feedback and reporting bugs',
+                              // overflow: TextOverflow.fade,
+                              maxLines: 3,
+                              // softWrap: false,
+                              style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w200,
+                                color: Colors.black,
+                              )),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+                Container(
+                  // color: Colors.blueAccent,
+                  padding: EdgeInsets.only(left: 30,right: 10),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        height: 150,
+                      ),
+                      SvgPicture.asset(
+                        'lib/assets/images/video.svg',
+                        color: Colors.blueAccent,
+                        width: 35,
+                      ),
+                      Text(
+                        'Your crash logs, usage information and feedback may be used by the Application Provider to improve rheir app and related products. Crash logs and usage information may also be used by Apple to improve the TestFlight app. ',
+                       textAlign: TextAlign.center,
+                        style:
+                            TextStyle(fontSize: 10, fontWeight: FontWeight.w300),
+                      ),
+                      Text(
+                        'See how your data is managed...',
+                        style: TextStyle(
+                          color: Colors.blueAccent,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 11,
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ],
             ),
