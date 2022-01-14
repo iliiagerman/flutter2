@@ -151,7 +151,7 @@ class MyFirstApp extends StatelessWidget {
                 ),
                 Container(
                   // color: Colors.blueAccent,
-                  padding: EdgeInsets.only(left: 30,right: 10),
+                  padding: EdgeInsets.only(left: 30, right: 10),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -165,9 +165,9 @@ class MyFirstApp extends StatelessWidget {
                       ),
                       Text(
                         'Your crash logs, usage information and feedback may be used by the Application Provider to improve rheir app and related products. Crash logs and usage information may also be used by Apple to improve the TestFlight app. ',
-                       textAlign: TextAlign.center,
-                        style:
-                            TextStyle(fontSize: 10, fontWeight: FontWeight.w300),
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontSize: 10, fontWeight: FontWeight.w300),
                       ),
                       Text(
                         'See how your data is managed...',
@@ -177,8 +177,11 @@ class MyFirstApp extends StatelessWidget {
                           fontSize: 11,
                         ),
                       ),
-                      SizedBox(height: 20,),
-                      CupertinoButton.filled(child: Text('Continue'), onPressed: (){}),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      CupertinoButton.filled(
+                          child: Text('Continue'), onPressed: () {}),
                     ],
                   ),
                 ),
