@@ -61,7 +61,8 @@ class MyFirstApp extends StatelessWidget {
                                 fontSize: 13,
                                 fontWeight: FontWeight.w200,
                                 color: Colors.black,
-                              )),
+                              )
+                          ),
                         ],
                       ),
                     )
@@ -143,12 +144,14 @@ class MyFirstApp extends StatelessWidget {
                                 fontSize: 13,
                                 fontWeight: FontWeight.w200,
                                 color: Colors.black,
-                              )),
+                              )
+                          ),
                         ],
                       ),
                     )
                   ],
                 ),
+
                 Container(
                   // color: Colors.blueAccent,
                   padding: EdgeInsets.only(left: 30, right: 10),
@@ -172,11 +175,12 @@ class MyFirstApp extends StatelessWidget {
                       Text(
                         'See how your data is managed...',
                         style: TextStyle(
-                          color: Colors.blueAccent,
+                          color: Colors.blue,
                           fontWeight: FontWeight.bold,
                           fontSize: 11,
                         ),
                       ),
+
                       SizedBox(
                         height: 20,
                       ),
