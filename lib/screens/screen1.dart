@@ -35,7 +35,7 @@ class MyFirstApp extends StatelessWidget {
                       height: 100,
                     ),
                     SvgPicture.asset(
-                      'lib/assets/images/anchor.svg',
+                      'lib/assets/images/screen1/anchor.svg',
                       color: Colors.blueAccent,
                       width: 40,
                     ),
@@ -77,7 +77,7 @@ class MyFirstApp extends StatelessWidget {
                       height: 100,
                     ),
                     SvgPicture.asset(
-                      'lib/assets/images/cpu.svg',
+                      'lib/assets/images/screen1/cpu.svg',
                       color: Colors.blueAccent,
                       width: 40,
                     ),
@@ -118,7 +118,7 @@ class MyFirstApp extends StatelessWidget {
                       height: 100,
                     ),
                     SvgPicture.asset(
-                      'lib/assets/images/star.svg',
+                      'lib/assets/images/screen1/star.svg',
                       color: Colors.blueAccent,
                       width: 40,
                     ),
@@ -162,7 +162,7 @@ class MyFirstApp extends StatelessWidget {
                         height: 150,
                       ),
                       SvgPicture.asset(
-                        'lib/assets/images/video.svg',
+                        'lib/assets/images/screen1/video.svg',
                         color: Colors.blueAccent,
                         width: 35,
                       ),

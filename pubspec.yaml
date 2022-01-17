@@ -25,5 +25,6 @@ dev_dependencies:
 flutter:
   assets:
     - lib/assets/images/
-    - lib/assets/images/screen2
+    - lib/assets/images/screen1/
+    - lib/assets/images/screen2/
   uses-material-design: true
