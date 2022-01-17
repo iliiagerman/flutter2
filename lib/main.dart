@@ -1,197 +1,70 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+// import 'package:flutter_svg/svg.dart';
 
 void main() {
-  return runApp(MyFirstApp());
+  return runApp(Screen2());
 }
 
-class MyFirstApp extends StatelessWidget {
+class Screen2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.white,
         body: SafeArea(
-          child: Container(
-            child: Column(
-              children: <Widget>[
-                SizedBox(
-                  height: 70,
+          child: Column(children: [
+            Container(
+              padding: EdgeInsets.all(15),
+              margin: EdgeInsets.only(left: 15,top: 20,right: 15,bottom: 4),
+              child: Row(children: [
+                SvgPicture.asset(
+                  'lib/assets/images/bookmark.svg',
+                  width: 24,
                 ),
+                SizedBox(width: 10,),
                 Text(
-                  'Welcome to TestFlifht',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w800,
-                      fontSize: 27,
-                      decoration: TextDecoration.none),
+                  'Закладки',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                 ),
-                Row(
-                  children: [
-                    SizedBox(
-                      width: 30,
-                    ),
-                    SizedBox(
-                      height: 100,
-                    ),
-                    SvgPicture.asset(
-                      'lib/assets/images/anchor.svg',
-                      color: Colors.blueAccent,
-                      width: 40,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('Accept Invitations',
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black,
-                              )),
-                          Text(
-                              'Accept invitations to beta programmers and install the latest beta software',
-                              // overflow: TextOverflow.fade,
-                              maxLines: 3,
-                              // softWrap: false,
-                              style: TextStyle(
-                                fontSize: 13,
-                                fontWeight: FontWeight.w200,
-                                color: Colors.black,
-                              )
-                          ),
-                        ],
-                      ),
-                    )
-                  ],
+                SizedBox(width: 172),
+                SvgPicture.asset(
+                  'lib/assets/images/chevron-right.svg',
+                  width: 25,
+                  color: Colors.black38,
                 ),
-                Row(
-                  children: [
-                    SizedBox(
-                      width: 30,
-                    ),
-                    SizedBox(
-                      height: 100,
-                    ),
-                    SvgPicture.asset(
-                      'lib/assets/images/cpu.svg',
-                      color: Colors.blueAccent,
-                      width: 40,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('Test Beta Apps',
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black,
-                              )),
-                          Text(
-                              'Test out the new functionality before it s released in the App Store',
-                              // overflow: TextOverflow.fade,
-                              maxLines: 3,
-                              // softWrap: false,
-                              style: TextStyle(
-                                fontSize: 13,
-                                fontWeight: FontWeight.w200,
-                                color: Colors.black,
-                              )),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-                Row(
-                  children: [
-                    SizedBox(
-                      width: 30,
-                    ),
-                    SizedBox(
-                      height: 100,
-                    ),
-                    SvgPicture.asset(
-                      'lib/assets/images/star.svg',
-                      color: Colors.blueAccent,
-                      width: 40,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('Provide Feedback',
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black,
-                              )),
-                          Text(
-                              'Help developers build better apps by providing feedback and reporting bugs',
-                              // overflow: TextOverflow.fade,
-                              maxLines: 3,
-                              // softWrap: false,
-                              style: TextStyle(
-                                fontSize: 13,
-                                fontWeight: FontWeight.w200,
-                                color: Colors.black,
-                              )
-                          ),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-
-                Container(
-                  // color: Colors.blueAccent,
-                  padding: EdgeInsets.only(left: 30, right: 10),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      SizedBox(
-                        height: 150,
-                      ),
-                      SvgPicture.asset(
-                        'lib/assets/images/video.svg',
-                        color: Colors.blueAccent,
-                        width: 35,
-                      ),
-                      Text(
-                        'Your crash logs, usage information and feedback may be used by the Application Provider to improve rheir app and related products. Crash logs and usage information may also be used by Apple to improve the TestFlight app. ',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontSize: 10, fontWeight: FontWeight.w300),
-                      ),
-                      Text(
-                        'See how your data is managed...',
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 11,
-                        ),
-                      ),
-
-                      SizedBox(
-                        height: 20,
-                      ),
-                      CupertinoButton.filled(
-                          child: Text('Continue'), onPressed: () {}),
-                    ],
-                  ),
-                ),
-              ],
+              ]),
+              decoration: BoxDecoration(
+                color: Color(0x2CA09F9F),
+                // color: Colors.white24,
+                  borderRadius: BorderRadius.circular(12)),
             ),
-          ),
+            Container(
+              padding: EdgeInsets.all(15),
+              margin: EdgeInsets.only(left: 15,top: 4,right: 15,bottom: 4),
+              child: Row(children: [
+                SvgPicture.asset(
+                  'lib/assets/images/bookmark.svg',
+                  width: 24,
+                ),
+                SizedBox(width: 10,),
+                Text(
+                  'Награды',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                ),
+                SizedBox(width: 178),
+                SvgPicture.asset(
+                  'lib/assets/images/chevron-right.svg',
+                  width: 25,
+                  color: Colors.black38,
+                ),
+              ]),
+              decoration: BoxDecoration(
+                  color: Color(0x2CA09F9F),
+                  borderRadius: BorderRadius.circular(12)),
+            ),
+          ]),
         ),
       ),
     );
