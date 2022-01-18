@@ -17,7 +17,7 @@ class SettingsListItem extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       child: Row(children: [
-        SvgPicture.asset(iconSvg, width: 24),
+        SvgPicture.asset(iconSvg, width: 18),
         const SizedBox(width: 10),
         Text(
           title,
