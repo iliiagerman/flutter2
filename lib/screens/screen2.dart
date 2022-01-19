@@ -19,15 +19,15 @@ class SettingsPage extends StatelessWidget {
           child: SafeArea(
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SettingsListItem(iconSvg: 'lib/assets/images/screen2/bookmark.svg', title: 'Закладки',),
-                  const SizedBox(height: 6),
-                  const SettingsListItem(iconSvg: 'lib/assets/images/screen2/award.svg', title: 'Награды'),
-                  const SizedBox(height: 6),
-                  const SettingsListItem(iconSvg: 'lib/assets/images/screen2/dollar-sign.svg', title: 'Донаты',),
-                  const SizedBox(height: 6),
-                  const SettingsListItem(iconSvg: 'lib/assets/images/screen2/message-square.svg', title:  'Комментарии',),
-                  const SizedBox(height: 30),
+                children: const [
+                  SettingsListItem(iconSvg: 'lib/assets/images/screen2/bookmark.svg', title: 'Закладки',),
+                  SizedBox(height: 6),
+                  SettingsListItem(iconSvg: 'lib/assets/images/screen2/award.svg', title: 'Награды'),
+                  SizedBox(height: 6),
+                  SettingsListItem(iconSvg: 'lib/assets/images/screen2/dollar-sign.svg', title: 'Донаты',),
+                  SizedBox(height: 6),
+                  SettingsListItem(iconSvg: 'lib/assets/images/screen2/message-square.svg', title:  'Комментарии',),
+                  SizedBox(height: 30),
                   Text(
                     'настройки',
                     style: TextStyle(
@@ -35,11 +35,11 @@ class SettingsPage extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  const SizedBox(height: 12),
-                  const SettingsListItem(iconSvg: 'lib/assets/images/screen2/server.svg', title: 'Лента',),
-                  const SizedBox(height: 6),
-                  const SettingsListItem(iconSvg: 'lib/assets/images/screen2/bell.svg', title: 'Уведомления',),
-                  const SizedBox(height: 30),
+                  SizedBox(height: 12),
+                  SettingsListItem(iconSvg: 'lib/assets/images/screen2/server.svg', title: 'Лента',),
+                  SizedBox(height: 6),
+                  SettingsListItem(iconSvg: 'lib/assets/images/screen2/bell.svg', title: 'Уведомления',),
+                  SizedBox(height: 30),
                   Text(
                     'сообщество',
                     style: TextStyle(
@@ -47,11 +47,11 @@ class SettingsPage extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  const SizedBox(height: 12),
-                  const SettingsListItem(iconSvg: 'lib/assets/images/screen2/thumbs-up.svg', title: 'Открытый бэклог',),
-                  const SizedBox(height: 6),
-                  const SettingsListItem(iconSvg: 'lib/assets/images/screen2/command.svg', title: 'Бот в телеграме',),
-                  const SizedBox(height: 50),
+                  SizedBox(height: 12),
+                  SettingsListItem(iconSvg: 'lib/assets/images/screen2/thumbs-up.svg', title: 'Открытый бэклог',),
+                  SizedBox(height: 6),
+                  SettingsListItem(iconSvg: 'lib/assets/images/screen2/command.svg', title: 'Бот в телеграме',),
+                  SizedBox(height: 50),
                   Center(
                     child: Text(
                       'Политика конфиденицильности',

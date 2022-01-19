@@ -19,7 +19,6 @@ class Post1{
       'body': this.body,
     };
   }
-
   factory Post1.fromMap(Map<String, dynamic> map) {
     return Post1(
       userId: map['userId'] as int,
@@ -27,5 +26,5 @@ class Post1{
       title: map['title'] as String,
       body: map['body'] as String,
     );
-  }
+  } 
 }
