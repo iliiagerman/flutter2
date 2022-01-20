@@ -9,7 +9,8 @@ class UserListItemWidget extends StatelessWidget {
   const UserListItemWidget({Key? key,
     required this.user,
     required this.selected,
-    required this.onClick})
+    required this.onClick,
+  })
       : super(key: key);
 
 
@@ -23,12 +24,14 @@ class UserListItemWidget extends StatelessWidget {
         child: Row(children: [
            CircleAvatar(
            backgroundColor: Colors.grey,
-            child: Text(
+            backgroundImage: user.image,
+            child: user.image == null ? Text(
               user.name[0],
-            ),
+            ): const SizedBox(height: 0,width: 0,),
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
             Text(user.name + ' ' + user.secondName),
             Visibility(

@@ -16,7 +16,7 @@ class SettingsPage extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.grey,
         body: Container(
-          padding: const EdgeInsets.only(left: 15, right: 15),
+          padding: const EdgeInsets.only(left: 10, right: 10),
           child: SafeArea(
             child: Column(children: [
               UserListItemWidget(
@@ -34,6 +34,12 @@ class SettingsPage extends StatelessWidget {
               UserListItemWidget(
                 selected: false,
                 user: UserUtil.usersList.elementAt(2),
+                onClick: () {},
+              ),
+              const SizedBox(height: 6,),
+              UserListItemWidget(
+                selected: false,
+                user: UserUtil.usersList.elementAt(3),
                 onClick: () {},
               ),
             ]),
