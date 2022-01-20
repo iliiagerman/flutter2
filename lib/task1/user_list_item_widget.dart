@@ -19,19 +19,10 @@ class UserListItemWidget extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       child: Row(children: [
-        const SizedBox(width: 10),
-        Text(
-          new User('ded', 'dw', "dw"),
-          maxLines: 1,
-          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-        ),
-        const Spacer(),
-        SvgPicture.asset(
-          'lib/assets/images/screen2/chevron-right.svg',
-          width: 25,
-          color: Colors.black38,
-        ),
+        Text(user.name, ),
+        Text(user.secondName, ),
       ]),
     );
+
   }
 }

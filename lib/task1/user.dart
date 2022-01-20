@@ -1,10 +1,14 @@
-import 'package:flutter/cupertino.dart';
 
 class User{
   final int id;
   final String name;
   final String secondName;
-  final String role;
+  final String? role;
 
-  User(this.id, this.name, this.secondName, this.role);
+  const User({
+    required this.id,
+    required this.name,
+    required this.secondName,
+    this.role,
+  });
 }
