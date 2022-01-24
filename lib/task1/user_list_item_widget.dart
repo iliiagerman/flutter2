@@ -53,6 +53,7 @@ class UserListItemWidget extends StatelessWidget {
           // ),
           const Icon(
             Icons.check_circle,
+            color: Colors.blue,
             size: 30,
           ),
         ]),
