@@ -17,7 +17,6 @@ class UserListItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 66,
-      color: Colors.white,
       padding: const EdgeInsets.all(16),
       child: Center(
         child: Row(children: [
@@ -57,6 +56,10 @@ class UserListItemWidget extends StatelessWidget {
             size: 30,
           ),
         ]),
+      ),
+      decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(10)
       ),
     );
   }
