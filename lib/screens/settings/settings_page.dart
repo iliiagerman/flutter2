@@ -4,8 +4,8 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_second/screens/settings/settings_list_item.dart';
 import 'package:flutter_svg/svg.dart';
 
-class SettingsPage extends StatelessWidget {
-  const SettingsPage({Key? key}) : super(key: key);
+class SettingsPage1 extends StatelessWidget {
+  const SettingsPage1({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

@@ -3,19 +3,18 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_second/screens/settings/settings_list_item.dart';
 import 'package:flutter_svg/svg.dart';
 
-void main() {
-  return runApp(SettingsPage());
-}
 
-class SettingsPage extends StatelessWidget {
-  const SettingsPage({Key? key}) : super(key: key);
+class SettingsPageScreen2 extends StatelessWidget {
+  const SettingsPageScreen2({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.white,
         body: Container(
-          padding: EdgeInsets.only(left: 15,right: 15),
+          padding: const EdgeInsets.only(left: 15,right: 15),
           child: SafeArea(
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

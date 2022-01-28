@@ -3,12 +3,9 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_second/task1/user_list_item_widget.dart';
 import 'package:flutter_second/user_util.dart';
 
-void main() {
-  return runApp(const SettingsPage());
-}
 
-class SettingsPage extends StatelessWidget {
-  const SettingsPage({Key? key}) : super(key: key);
+class SettingsPageScreen3 extends StatelessWidget {
+  const SettingsPageScreen3({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

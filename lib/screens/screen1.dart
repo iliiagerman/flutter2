@@ -2,11 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-void main() {
-  return runApp(MyFirstApp());
-}
-
-class MyFirstApp extends StatelessWidget {
+class MyFirstAppScreen1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
