@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_second/screens/settings/setting_ed_sc4.dart';
 import 'package:flutter_second/screens/settings/settings_every_day_sc4.dart';
 
 class WeatherForecast extends StatelessWidget {
@@ -108,7 +109,15 @@ class WeatherForecast extends StatelessWidget {
                       fontWeight: FontWeight.w200,
                       color: Colors.white,
                     ),
-                  )
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    children: [
+                      SettingEveryDayScreen4(day: 'Friday', gradusPirsent: '6 ˚F'),
+                      SettingEveryDayScreen4(day: 'Saturday', gradusPirsent: '5 ˚F'),
+                      SettingEveryDayScreen4(day: 'Sunday', gradusPirsent: '22 ˚F'),
+                    ],
+                  ),
                 ],
               ),
             ),
