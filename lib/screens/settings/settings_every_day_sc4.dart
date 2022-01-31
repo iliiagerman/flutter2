@@ -14,7 +14,7 @@ class SettingsEveryDay extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Icon(
+        const Icon(
           Icons.ac_unit,
           color: Colors.white,
           size: 25,
