@@ -17,16 +17,17 @@ class TextFormField2 extends StatelessWidget {
             children: [
               TextFormField(
                 decoration: const InputDecoration(
-                    labelText: 'Full Name *',
-                    prefixIcon: Icon(Icons.person),
-                    suffixIcon: Icon(Icons.delete_outline_rounded, color: Colors.red),
-                    hintText: 'Напишите ваше полное имя',
-                    enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(20)),
-                        borderSide: BorderSide(color: Colors.black, width: 2)),
-                  focusedBorder: OutlineInputBorder(
+                  labelText: 'Full Name *',
+                  prefixIcon: Icon(Icons.person),
+                  suffixIcon:
+                      Icon(Icons.delete_outline_rounded, color: Colors.red),
+                  hintText: 'Напишите ваше полное имя',
+                  enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(20)),
-                      borderSide: BorderSide(color: Colors.blue, width: 2),
+                      borderSide: BorderSide(color: Colors.black, width: 2)),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                    borderSide: BorderSide(color: Colors.blue, width: 2),
                   ),
                 ),
               ),
@@ -35,30 +36,55 @@ class TextFormField2 extends StatelessWidget {
                 decoration: InputDecoration(
                   labelText: 'Phone Namber *',
                   prefixIcon: Icon(Icons.call),
-                  suffixIcon: Icon(Icons.delete_outline_rounded, color: Colors.red),
+                  suffixIcon:
+                      Icon(Icons.delete_outline_rounded, color: Colors.red),
+                  helperText: 'Phone format: (XXX)XXX-XXXX',
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
                       borderSide: BorderSide(color: Colors.black, width: 2)),
                   focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
-                    borderSide: BorderSide(color: Colors.blue, width: 2)),
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                      borderSide: BorderSide(color: Colors.blue, width: 2)),
                 ),
               ),
+              SizedBox(height: 20),
               TextFormField(
-                decoration: InputDecoration(labelText: 'Phone Namber *'),
+                decoration: InputDecoration(
+                    labelText: 'Email Address', icon: Icon(Icons.mail)),
               ),
+              SizedBox(height: 20),
               TextFormField(
-                decoration: InputDecoration(labelText: 'Email Address'),
+                decoration: InputDecoration(
+                  labelText: 'Life Story',
+                  helperText: 'Keep iot short, this is just a demo',
+                  enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black26)),
+                  focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.blue)),
+                ),
+                maxLines: 3,
               ),
+              SizedBox(height: 20),
               TextFormField(
-                decoration: InputDecoration(labelText: 'Life Story'),
+                decoration: InputDecoration(
+                    labelText: 'Password *',
+                    suffixIcon: IconButton(
+                      icon: Icon(Icons.visibility),
+                      onPressed: () {},
+                    ),
+                    icon: Icon(Icons.security)),
               ),
+              SizedBox(height: 20),
               TextFormField(
-                decoration: InputDecoration(labelText: 'Password *'),
+                decoration: InputDecoration(
+                    labelText: 'Confirm Password *',
+                    suffixIcon: IconButton(
+                      icon: Icon(Icons.visibility),
+                      onPressed: () {},
+                    ),
+                    icon: Icon(Icons.border_color)),
               ),
-              TextFormField(
-                decoration: InputDecoration(labelText: 'Confirm Password *'),
-              ),
+              SizedBox(height: 20),
               RaisedButton(
                   color: Colors.green,
                   child: Text(
