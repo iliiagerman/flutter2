@@ -2,8 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class TextFormField2 extends StatelessWidget {
+class TextFormField2 extends StatefulWidget {
   const TextFormField2({Key? key}) : super(key: key);
+
+  @override
+  _TextFormField2State createState() => _TextFormField2State();
+}
+
+class _TextFormField2State extends State<TextFormField2> {
+  bool _hidePass = true;
 
   @override
   Widget build(BuildContext context) {
@@ -37,20 +44,19 @@ class TextFormField2 extends StatelessWidget {
                 decoration: InputDecoration(
                   labelText: 'Phone Number *',
                   prefixIcon: const Icon(Icons.call),
-                  suffixIcon:
-                      const Icon(Icons.delete_outline_rounded, color: Colors.red),
+                  suffixIcon: const Icon(Icons.delete_outline_rounded,
+                      color: Colors.red),
                   helperText: 'Phone format: (XXX)XXX-XX-XX',
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
-                      borderSide: const BorderSide(color: Colors.black, width: 2)),
+                      borderSide:
+                          const BorderSide(color: Colors.black, width: 2)),
                   focusedBorder: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       borderSide: BorderSide(color: Colors.blue, width: 2)),
                 ),
                 keyboardType: TextInputType.phone,
-                inputFormatters: [
-                  FilteringTextInputFormatter.digitsOnly
-                ],
+                inputFormatters: [FilteringTextInputFormatter.digitsOnly],
               ),
               const SizedBox(height: 20),
               TextFormField(
@@ -71,29 +77,32 @@ class TextFormField2 extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               TextFormField(
-                obscureText: true,
+                obscureText: _hidePass,
+                maxLength: 8,
                 decoration: InputDecoration(
                     labelText: 'Password *',
                     suffixIcon: IconButton(
-                      icon: const Icon(Icons.visibility),
-                      onPressed: () {},
+                      icon: Icon(_hidePass ? Icons.visibility : Icons.visibility_off),
+                      onPressed: () {
+                        setState(() {
+                          _hidePass = !_hidePass;
+                        });
+                      },
                     ),
                     icon: const Icon(Icons.security)),
               ),
               const SizedBox(height: 20),
               TextFormField(
-                obscureText: true,
+                obscureText: _hidePass,
+                maxLength: 8,
                 decoration: InputDecoration(
-                    labelText: 'Confirm Password *',
-                    suffixIcon: IconButton(
-                      icon: const Icon(Icons.visibility),
-                      onPressed: () {},
-                    ),
-                    icon: const Icon(Icons.border_color)),
+                  labelText: 'Confirm Password *',icon: Icon(Icons.border_color)
+                ),
               ),
               const SizedBox(height: 20),
-              RaisedButton(
-                  color: Colors.green,
+              ElevatedButton(
+                  // color: Colors.green,
+                style: ButtonStyle(backgroundColor: Colors.green),
                   child: const Text(
                     'Submit Form',
                     style: TextStyle(color: Colors.white),
@@ -106,3 +115,4 @@ class TextFormField2 extends StatelessWidget {
     );
   }
 }
+// Colors.green
