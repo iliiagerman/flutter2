@@ -12,6 +12,21 @@ class TextFormField2 extends StatefulWidget {
 class _TextFormField2State extends State<TextFormField2> {
   bool _hidePass = true;
 
+  final _nameController = TextEditingController();
+  final _phoneController = TextEditingController();
+
+  final _namefocus = FocusNode();
+  final _phonefocus = FocusNode();
+  final _passwordfocus = FocusNode();
+
+  @override
+  void dispose() {
+    _namefocus.dispose();
+    _phonefocus.dispose();
+    _passwordfocus.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,11 +39,21 @@ class _TextFormField2State extends State<TextFormField2> {
             padding: const EdgeInsets.all(16),
             children: [
               TextFormField(
-                decoration: const InputDecoration(
+                controller: _nameController,
+                focusNode: _namefocus,
+                autofocus: true,
+                onFieldSubmitted: (_) {
+                  _fildFocusChange(context, _namefocus, _phonefocus);
+                },
+                decoration: InputDecoration(
                   labelText: 'Full Name *',
                   prefixIcon: Icon(Icons.person),
-                  suffixIcon:
-                      Icon(Icons.delete_outline_rounded, color: Colors.red),
+                  suffixIcon: GestureDetector(
+                      onTap: () {
+                        _nameController.clear();
+                      },
+                      child: Icon(Icons.delete_outline_rounded,
+                          color: Colors.red)),
                   hintText: 'Напишите ваше полное имя',
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -41,11 +66,22 @@ class _TextFormField2State extends State<TextFormField2> {
               ),
               const SizedBox(height: 20),
               TextFormField(
+                controller: _phoneController,
+                focusNode: _phonefocus,
+                autofocus: true,
+                onFieldSubmitted: (_) {
+                  _fildFocusChange(context, _phonefocus, _passwordfocus);
+                },
                 decoration: InputDecoration(
                   labelText: 'Phone Number *',
                   prefixIcon: const Icon(Icons.call),
-                  suffixIcon: const Icon(Icons.delete_outline_rounded,
-                      color: Colors.red),
+                  suffixIcon: GestureDetector(
+                    onLongPress: (){
+                      _phoneController.clear();
+                    },
+                    child: Icon(Icons.delete_outline_rounded,
+                        color: Colors.red),
+                  ),
                   helperText: 'Phone format: (XXX)XXX-XX-XX',
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
@@ -77,12 +113,14 @@ class _TextFormField2State extends State<TextFormField2> {
               ),
               const SizedBox(height: 20),
               TextFormField(
+                focusNode: _passwordfocus,
                 obscureText: _hidePass,
                 maxLength: 8,
                 decoration: InputDecoration(
                     labelText: 'Password *',
                     suffixIcon: IconButton(
-                      icon: Icon(_hidePass ? Icons.visibility : Icons.visibility_off),
+                      icon: Icon(
+                          _hidePass ? Icons.visibility : Icons.visibility_off),
                       onPressed: () {
                         setState(() {
                           _hidePass = !_hidePass;
@@ -95,14 +133,13 @@ class _TextFormField2State extends State<TextFormField2> {
               TextFormField(
                 obscureText: _hidePass,
                 maxLength: 8,
-                decoration: InputDecoration(
-                  labelText: 'Confirm Password *',icon: Icon(Icons.border_color)
-                ),
+                decoration: const InputDecoration(
+                    labelText: 'Confirm Password *',
+                    icon: Icon(Icons.border_color)),
               ),
               const SizedBox(height: 20),
               ElevatedButton(
-                  // color: Colors.green,
-                style: ButtonStyle(backgroundColor: Colors.green),
+                  style: ElevatedButton.styleFrom(primary: Colors.green),
                   child: const Text(
                     'Submit Form',
                     style: TextStyle(color: Colors.white),
@@ -114,5 +151,10 @@ class _TextFormField2State extends State<TextFormField2> {
       ),
     );
   }
+
+  void _fildFocusChange(
+      BuildContext context, FocusNode currentFocus, FocusNode nextFocus) {
+    currentFocus.unfocus();
+    FocusScope.of(context).requestFocus(nextFocus);
+  }
 }
-// Colors.green
