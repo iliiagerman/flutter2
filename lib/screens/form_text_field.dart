@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class TextFormField2 extends StatelessWidget {
   const TextFormField2({Key? key}) : super(key: key);
@@ -13,7 +14,7 @@ class TextFormField2 extends StatelessWidget {
         ),
         body: Form(
           child: ListView(
-            padding: EdgeInsets.all(16),
+            padding: const EdgeInsets.all(16),
             children: [
               TextFormField(
                 decoration: const InputDecoration(
@@ -31,30 +32,34 @@ class TextFormField2 extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               TextFormField(
                 decoration: InputDecoration(
-                  labelText: 'Phone Namber *',
-                  prefixIcon: Icon(Icons.call),
+                  labelText: 'Phone Number *',
+                  prefixIcon: const Icon(Icons.call),
                   suffixIcon:
-                      Icon(Icons.delete_outline_rounded, color: Colors.red),
-                  helperText: 'Phone format: (XXX)XXX-XXXX',
+                      const Icon(Icons.delete_outline_rounded, color: Colors.red),
+                  helperText: 'Phone format: (XXX)XXX-XX-XX',
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
-                      borderSide: BorderSide(color: Colors.black, width: 2)),
-                  focusedBorder: OutlineInputBorder(
+                      borderSide: const BorderSide(color: Colors.black, width: 2)),
+                  focusedBorder: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       borderSide: BorderSide(color: Colors.blue, width: 2)),
                 ),
+                keyboardType: TextInputType.phone,
+                inputFormatters: [
+                  FilteringTextInputFormatter.digitsOnly
+                ],
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                     labelText: 'Email Address', icon: Icon(Icons.mail)),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Life Story',
                   helperText: 'Keep iot short, this is just a demo',
                   enabledBorder: OutlineInputBorder(
@@ -64,30 +69,32 @@ class TextFormField2 extends StatelessWidget {
                 ),
                 maxLines: 3,
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               TextFormField(
+                obscureText: true,
                 decoration: InputDecoration(
                     labelText: 'Password *',
                     suffixIcon: IconButton(
-                      icon: Icon(Icons.visibility),
+                      icon: const Icon(Icons.visibility),
                       onPressed: () {},
                     ),
-                    icon: Icon(Icons.security)),
+                    icon: const Icon(Icons.security)),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               TextFormField(
+                obscureText: true,
                 decoration: InputDecoration(
                     labelText: 'Confirm Password *',
                     suffixIcon: IconButton(
-                      icon: Icon(Icons.visibility),
+                      icon: const Icon(Icons.visibility),
                       onPressed: () {},
                     ),
-                    icon: Icon(Icons.border_color)),
+                    icon: const Icon(Icons.border_color)),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               RaisedButton(
                   color: Colors.green,
-                  child: Text(
+                  child: const Text(
                     'Submit Form',
                     style: TextStyle(color: Colors.white),
                   ),
