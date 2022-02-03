@@ -76,7 +76,7 @@ class _TextFormField2State extends State<TextFormField2> {
                   labelText: 'Phone Number *',
                   prefixIcon: const Icon(Icons.call),
                   suffixIcon: GestureDetector(
-                    onLongPress: (){
+                    onLongPress: () {
                       _phoneController.clear();
                     },
                     child: Icon(Icons.delete_outline_rounded,
@@ -86,7 +86,7 @@ class _TextFormField2State extends State<TextFormField2> {
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
                       borderSide:
-                          const BorderSide(color: Colors.black, width: 2)),
+                      const BorderSide(color: Colors.black, width: 2)),
                   focusedBorder: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       borderSide: BorderSide(color: Colors.blue, width: 2)),
@@ -152,8 +152,8 @@ class _TextFormField2State extends State<TextFormField2> {
     );
   }
 
-  void _fildFocusChange(
-      BuildContext context, FocusNode currentFocus, FocusNode nextFocus) {
+  void _fildFocusChange(BuildContext context, FocusNode currentFocus,
+      FocusNode nextFocus) {
     currentFocus.unfocus();
     FocusScope.of(context).requestFocus(nextFocus);
   }
