@@ -64,7 +64,7 @@ class _TextFormField2State extends State<TextFormField2> {
                   ),
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 25),
               TextFormField(
                 controller: _phoneController,
                 focusNode: _phonefocus,
@@ -94,12 +94,12 @@ class _TextFormField2State extends State<TextFormField2> {
                 keyboardType: TextInputType.phone,
                 inputFormatters: [FilteringTextInputFormatter.digitsOnly],
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 25),
               TextFormField(
                 decoration: const InputDecoration(
                     labelText: 'Email Address', icon: Icon(Icons.mail)),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 25),
               TextFormField(
                 decoration: const InputDecoration(
                   labelText: 'Life Story',
@@ -111,7 +111,7 @@ class _TextFormField2State extends State<TextFormField2> {
                 ),
                 maxLines: 3,
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 25),
               TextFormField(
                 focusNode: _passwordfocus,
                 obscureText: _hidePass,
@@ -129,7 +129,7 @@ class _TextFormField2State extends State<TextFormField2> {
                     ),
                     icon: const Icon(Icons.security)),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 25),
               TextFormField(
                 obscureText: _hidePass,
                 maxLength: 8,
@@ -137,7 +137,7 @@ class _TextFormField2State extends State<TextFormField2> {
                     labelText: 'Confirm Password *',
                     icon: Icon(Icons.border_color)),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 25),
               ElevatedButton(
                   style: ElevatedButton.styleFrom(primary: Colors.green),
                   child: const Text(
