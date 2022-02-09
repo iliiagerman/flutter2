@@ -64,7 +64,7 @@ class _TextFormField2State extends State<TextFormField2> {
                   ),
                 ),
               ),
-              const SizedBox(height: 25),
+              const SizedBox(height: 18),
               TextFormField(
                 controller: _phoneController,
                 focusNode: _phonefocus,
@@ -129,7 +129,7 @@ class _TextFormField2State extends State<TextFormField2> {
                     ),
                     icon: const Icon(Icons.security)),
               ),
-              const SizedBox(height: 25),
+              const SizedBox(height: 18),
               TextFormField(
                 obscureText: _hidePass,
                 maxLength: 8,

@@ -27,7 +27,7 @@ class WeatherForecast extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(height:25),
+                  SizedBox(height: 25),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -113,9 +113,12 @@ class WeatherForecast extends StatelessWidget {
                   SizedBox(height: 20),
                   Row(
                     children: [
-                      SettingEveryDayScreen4(day: 'Friday', gradusPirsent: '6 ˚F'),
-                      SettingEveryDayScreen4(day: 'Saturday', gradusPirsent: '5 ˚F'),
-                      SettingEveryDayScreen4(day: 'Sunday', gradusPirsent: '22 ˚F'),
+                      SettingEveryDayScreen4(
+                          day: 'Friday', gradusPirsent: '6 ˚F'),
+                      SettingEveryDayScreen4(
+                          day: 'Saturday', gradusPirsent: '5 ˚F'),
+                      SettingEveryDayScreen4(
+                          day: 'Sunday', gradusPirsent: '22 ˚F'),
                     ],
                   ),
                 ],
