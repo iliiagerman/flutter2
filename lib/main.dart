@@ -13,11 +13,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return const MaterialApp(
-      home: TextFormField2(),
+      home: Scaffold(),
     );
   }
 }
-
 
 
 
