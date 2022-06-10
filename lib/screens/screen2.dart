@@ -34,6 +34,9 @@ class SettingsPageScreen2 extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                     ),
                   ),
+
+
+
                   SizedBox(height: 12),
                   SettingsListItem(iconSvg: 'lib/assets/images/screen2/server.svg', title: 'Лента',),
                   SizedBox(height: 6),
